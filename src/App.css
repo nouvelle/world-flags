@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+.app {
+  padding: 20px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* 
+Mobile: 375px
+Desktop: 1440px
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+Body 
+Homepage Items: 14px
+Detail Page: 16px
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+Fonts
+Family: Nunito Sans
+Weights: 300, 600, 800
+*/
