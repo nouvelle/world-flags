@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Card from './Card'
 import Input from './Input'
+import Filter from './Filter'
 import { RootContext } from '../../App';
 
 import './All.css';
@@ -11,7 +12,10 @@ function All() {
   // console.log(countriesData)
   return (
     <div className="contents">
-      <Input />
+      <div className="choicesWrap">
+        <Input />
+        <Filter />
+      </div>
       <div className="cardWrap">
         {(() => {
           if(countriesData) {
