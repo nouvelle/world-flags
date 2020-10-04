@@ -4,7 +4,6 @@ import './Card.css';
 
 function Card(props) {
   const [, , , setDetail, , setIsAll] = useContext(RootContext);
-  
 
   function clickCard(name) {
     console.log("click", name)
