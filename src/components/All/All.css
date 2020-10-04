@@ -1,5 +1,5 @@
 .contents {
-  width: 1440px;
+  max-width: 1440px;
   padding: 20px 40px;
   background-color: hsl(0, 0%, 98%);
 }

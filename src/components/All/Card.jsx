@@ -16,6 +16,7 @@ function Card(props) {
         setDetail(data);
         setIsAll(false);
       })
+      .catch(err => console.log("Err :", err))
   }
 
   return (

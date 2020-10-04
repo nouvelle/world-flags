@@ -1,0 +1,12 @@
+.wrapDetail {
+  display: flex;
+}
+
+.leftFlag {
+  width: 45%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
