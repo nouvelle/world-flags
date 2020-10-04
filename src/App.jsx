@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <RootContext.Provider value={[countriesData, detail, setDetail, isAll, setIsAll]}>
+      <RootContext.Provider value={[countriesData, setCountriesData, detail, setDetail, isAll, setIsAll]}>
         {(() => {
           return isAll ? <All /> : <Detail />;
         })()}

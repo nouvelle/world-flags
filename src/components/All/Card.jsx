@@ -3,7 +3,7 @@ import { RootContext } from '../../App';
 import './Card.css';
 
 function Card(props) {
-  const [, , setDetail, , setIsAll] = useContext(RootContext);
+  const [, , , setDetail, , setIsAll] = useContext(RootContext);
   
 
   function clickCard(name) {

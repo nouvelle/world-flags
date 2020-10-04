@@ -4,7 +4,7 @@ import { RootContext } from '../../App';
 import './Detail.css';
 
 function Detail() {
-  const [, detail, , , setIsAll] = useContext(RootContext);
+  const [, , detail, , , setIsAll] = useContext(RootContext);
   console.log(detail)
 
   const countryInfo = {
