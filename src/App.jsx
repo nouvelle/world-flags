@@ -3,20 +3,15 @@ import Header from './components/Header'
 import All from './components/All/All'
 import Detail from './components/Detail/Detail'
 import './App.css';
+import './darkmode.css';
 
 export const RootContext = createContext();
-// export const RootContext = createContext({
-//   countriesData: [],
-//   detail: [],
-//   addDetail: () => {},
-//   isAll: true,
-//   addView: () => {}
-// });
 
 function App() {
   const [countriesData, setCountriesData] = useState([]);
   const [detail, setDetail] = useState([]);
   const [isAll, setIsAll] = useState(true);
+  const [colorMode, setColorMode] = useState("light");
 
   useEffect(() => {
     fetch("https://restcountries.eu/rest/v2/all")
@@ -27,9 +22,9 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div className={`app ${colorMode}`}>
+      <RootContext.Provider value={[countriesData, setCountriesData, detail, setDetail, isAll, setIsAll, colorMode, setColorMode]}>
       <Header />
-      <RootContext.Provider value={[countriesData, setCountriesData, detail, setDetail, isAll, setIsAll]}>
         {(() => {
           return isAll ? <All /> : <Detail />;
         })()}

@@ -1,0 +1,23 @@
+.app.dark {
+  background: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+.app.dark header{
+  background: hsl(209, 23%, 22%);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+}
+
+.app.dark .card,
+.app.dark .searchBox,
+.app.dark .FilterBox select {
+  background: hsl(209, 23%, 22%);
+  box-shadow: 3px 3px 4px rgb(33, 33, 33);
+}
+
+.app.dark .backBtn,
+.app.dark .borderCountry {
+  background: hsl(209, 23%, 22%);
+  box-shadow: 0 0 4px 1px rgb(33, 33, 33);;
+  color: hsl(0, 0%, 100%);
+}

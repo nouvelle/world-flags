@@ -15,7 +15,9 @@
   padding: 20px;
   border: none;
   font-size: 14px;
+  background: hsl(0, 0%, 100%);
   box-shadow: 3px 3px 4px rgba(180, 180, 180, .2);
+  color: hsl(0, 0%, 52%);
 }
 
 @media screen and (max-width: 375px) {

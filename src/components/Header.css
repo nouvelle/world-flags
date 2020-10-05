@@ -1,8 +1,10 @@
 .header {
-  padding: 20px;
+  padding: 20px 50px;
   font-weight: 800;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: space-between;
 }
 
 p {
