@@ -1,7 +1,5 @@
 .contents {
-  max-width: 1440px;
   padding: 20px 40px;
-  background-color: hsl(0, 0%, 98%);
 }
 
 .choicesWrap {
@@ -12,4 +10,20 @@
 .cardWrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 375px) {
+  .contents {
+    margin: 0 auto;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+  .choicesWrap {
+    display: block;
+    /* justify-content: space-between; */
+  }
+  .cardWrap {
+    display: block;
+  }
 }
