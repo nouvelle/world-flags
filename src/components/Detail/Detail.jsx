@@ -79,6 +79,7 @@ function Detail() {
                   return (
                     <div 
                       key={i}
+                      className="borderCountry"
                       onClick={() => clickBorderCountry(country.name)}
                     >{country.name}</div>
                   )

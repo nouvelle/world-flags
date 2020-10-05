@@ -6,12 +6,10 @@ function Card(props) {
   const [, , , setDetail, , setIsAll] = useContext(RootContext);
 
   function clickCard(name) {
-    console.log("click", name)
     const url = `https://restcountries.eu/rest/v2/name/${name}`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        console.log("data", data);
         setDetail(data);
         setIsAll(false);
       })
