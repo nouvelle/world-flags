@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { RootContext } from '../../App';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
 import './Input.css';
 
 function Input() {
@@ -23,8 +25,17 @@ function Input() {
       })
       .catch(err => console.log("Err :", err))
   }
+  function clear() {
+    fetch("https://restcountries.eu/rest/v2/all")
+    .then(res => res.json())
+    .then(data => {
+      setCountriesData(data);
+    })
+  }
+
   return (
     <div className="inputBox">
+      <i class="fas fa-search searchIcon"></i>
       <input
         className="searchBox"
         onChange={e => {
@@ -33,11 +44,12 @@ function Input() {
         }}
         type="text"
         placeholder="Search for a country..."/>
-      <button onClick={search}>search</button>
-      {(() => {
-        return (errMsg) ? <p>{errMsg}</p> : <></>
-      })()}
-    </div>
+        <button onClick={search}>search</button>
+        <button onClick={clear}>clear</button>
+        {(() => {
+          return (errMsg) ? <p>{errMsg}</p> : <></>
+        })()}
+      </div>
   );
 }
 
