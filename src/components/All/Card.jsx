@@ -26,9 +26,9 @@ function Card(props) {
               <div className="flag"><img src={data.flag} alt={data.name} /></div>
               <div className="description">
                 <div className="countryName">{data.name}</div>
-                <div><span className="title">Popilation: </span>{data.population.toLocaleString()}</div>
-                <div><span className="title">Region: </span>{data.region}</div>
-                <div><span className="title">Capital: </span>{data.capital}</div>
+                <div className="population"><span className="title">Population: </span>{data.population.toLocaleString()}</div>
+                <div className="region"><span className="title">Region: </span>{data.region}</div>
+                <div className="capital"><span className="title">Capital: </span>{data.capital}</div>
               </div>
             </div>
           );

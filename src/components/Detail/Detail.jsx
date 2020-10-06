@@ -64,15 +64,21 @@ function Detail() {
         </div>
         <div className="rightDetail">
           <div className="countryName">{detail[0].name}</div>
-          <div><span className="title">Native Name: </span>{countryInfo.nativeName}</div>
-          <div><span className="title">Popilation: </span>{countryInfo.population}</div>
-          <div><span className="title">Region: </span>{countryInfo.region}</div>
-          <div><span className="title">Sub Region: </span>{countryInfo.subregion}</div>
-          <div><span className="title">Capital: </span>{countryInfo.capital}</div>
-          <div><span className="title">Top Level Domain: </span>{countryInfo.topLevelDomain}</div>
-          <div><span className="title">Currencies: </span>{countryInfo.currencies}</div>
-          <div><span className="title">Languages: </span>{countryInfo.languages}</div>
-          <div><span className="title">Border Countries: </span>
+          <div className="wrapInsideDetail">
+            <div className="leftInsideDetail">
+              <div className="nativeName"><span className="title">Native Name: </span>{countryInfo.nativeName}</div>
+              <div className="population"><span className="title">Population: </span>{countryInfo.population}</div>
+              <div className="region"><span className="title">Region: </span>{countryInfo.region}</div>
+              <div className="subRegion"><span className="title">Sub Region: </span>{countryInfo.subregion}</div>
+              <div className="capital"><span className="title">Capital: </span>{countryInfo.capital}</div>
+            </div>
+            <div className="rightInsideDetail">
+              <div className="domain"><span className="title">Top Level Domain: </span>{countryInfo.topLevelDomain}</div>
+              <div className="currencies"><span className="title">Currencies: </span>{countryInfo.currencies}</div>
+              <div className="languages"><span className="title">Languages: </span>{countryInfo.languages}</div>
+            </div>
+          </div>
+          <div className="borderCountries"><span className="title">Border Countries: </span>
             {(() => {
               if(borders) {
                 return borders.map((country, i) => {
