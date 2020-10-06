@@ -79,6 +79,7 @@ function Detail() {
             </div>
           </div>
           <div className="borderCountries"><span className="title">Border Countries: </span>
+            <div className="wrapBorderCountries">
             {(() => {
               if(borders) {
                 return borders.map((country, i) => {
@@ -92,6 +93,7 @@ function Detail() {
                 })
               }
             })()}
+            </div>
           </div>
         </div>
       </div>
