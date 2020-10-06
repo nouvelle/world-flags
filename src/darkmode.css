@@ -8,6 +8,10 @@
   box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
 }
 
+.app.dark .contents{
+  background: hsl(207, 26%, 17%);
+}
+
 .app.dark .card,
 .app.dark .searchBox,
 .app.dark .FilterBox select {
