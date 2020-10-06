@@ -7,49 +7,47 @@ import './Input.css';
 function Input() {
   const [inputText, setInputText] = useState("");
   const [errMsg, setErrMsg] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
   const [, setCountriesData, , , ,] = useContext(RootContext);
 
-  function search(){
-    console.log("click", inputText)
-    if(!inputText) return;
-    const url = `https://restcountries.eu/rest/v2/name/${inputText}`;
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log("data", data);
-        if(data.status && data.status === 404){
-          setErrMsg("No data");
-        } else {
-          setCountriesData(data);
-        }
-      })
-      .catch(err => console.log("Err :", err))
-  }
-  function clear() {
-    fetch("https://restcountries.eu/rest/v2/all")
-    .then(res => res.json())
-    .then(data => {
-      setCountriesData(data);
-    })
+  function searchCountry(name) {
+    if(name !== inputText && !isSearching) {
+      let url = "";
+      (name === "") 
+        ? url = "https://restcountries.eu/rest/v2/all"
+        : url = `https://restcountries.eu/rest/v2/name/${name}`;
+      setInputText(name)
+      setIsSearching(true)
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          console.log("data", data);
+          if(data.status && data.status === 404){
+            setErrMsg("No data");
+          } else {
+            setErrMsg("");
+            setCountriesData(data);
+          }
+        })
+        .catch(err => console.log("Err :", err))
+        .finally(i => setIsSearching(false))
+    }
   }
 
   return (
-    <div className="inputBox">
-      <i class="fas fa-search searchIcon"></i>
-      <input
-        className="searchBox"
-        onChange={e => {
-          setInputText(e.target.value);
-          setErrMsg("");
-        }}
-        type="text"
-        placeholder="Search for a country..."/>
-        <button onClick={search}>search</button>
-        <button onClick={clear}>clear</button>
-        {(() => {
-          return (errMsg) ? <p>{errMsg}</p> : <></>
-        })()}
-      </div>
+    <>
+      <div className="inputBox">
+        <i className="fas fa-search searchIcon"></i>
+        <input
+          className="searchBox"
+          onChange={e => {
+            searchCountry(e.target.value);
+          }}
+          type="text"
+          placeholder="Search for a country..."/>
+        </div>
+        <div className="errMsg">{errMsg}</div>
+      </>
   );
 }
 
