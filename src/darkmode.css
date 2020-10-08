@@ -20,8 +20,14 @@
 }
 
 .app.dark .backBtn,
-.app.dark .borderCountry {
+.app.dark .borderCountry,
+.app.dark .selectTitle,
+.app.dark .selectList{
   background: hsl(209, 23%, 22%);
-  box-shadow: 0 0 4px 1px rgb(33, 33, 33);;
+  box-shadow: 0 0 4px 1px rgb(33, 33, 33);
+  color: hsl(0, 0%, 100%);
+}
+.app.dark .selectList li {
+  background: hsl(209, 23%, 22%);
   color: hsl(0, 0%, 100%);
 }
