@@ -26,4 +26,7 @@
   .header {
     padding: 20px;
   }
+  .headerTitle {
+    font-size: 20px;
+  }
 }
