@@ -8,6 +8,7 @@ function Filter() {
   const [, setCountriesData, , , ,] = useContext(RootContext);
 
   function handleChange(e){
+    console.log("filter")
     const region = e.target.value;
     let url = ""
     region === "All"
@@ -28,8 +29,8 @@ function Filter() {
       <div className="selectTitle"
         onChange={handleChange}
       >Filter by Region</div>
-      <i class="fas fa-angle-down downIcon"></i>
-      <ul class="selectList">
+      <i className="fas fa-angle-down downIcon"></i>
+      <ul className="selectList">
         <li data-value="All">All</li>
         <li data-value="Africa">Africa</li>
         <li data-value="Americas">Americas</li>

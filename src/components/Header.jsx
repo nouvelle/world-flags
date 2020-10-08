@@ -18,7 +18,7 @@ function Header() {
     <header className="header">
       <p onClick={goHome}>Where in the world?</p>
       <p onClick={changeMord}>
-        <i class="fas fa-moon moonIcon"></i>
+        <i className="fas fa-moon moonIcon"></i>
         Dark Mord
         </p>
     </header>
