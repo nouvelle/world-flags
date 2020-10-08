@@ -38,6 +38,7 @@ function Input() {
             searchCountry(e.target.value);
           }}
           type="text"
+          title="search country"
           placeholder="Search for a country..."/>
         </div>
       </>
