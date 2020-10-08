@@ -9,7 +9,7 @@ import './All.css';
 function All() {
   const [countriesData] = useContext(RootContext);
 
-  // console.log(countriesData)
+  console.log(countriesData)
   return (
     <div className="container">
       <div className="choicesWrap">

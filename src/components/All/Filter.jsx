@@ -7,6 +7,7 @@ import './Filter.css';
 function Filter() {
   const [, setCountriesData, , , ,] = useContext(RootContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [title, setTitle] = useState("Filter by Region");
 
   function openList() {
     (!isOpen) ? setIsOpen(true) : setIsOpen(false);
@@ -22,10 +23,10 @@ function Filter() {
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        console.log("data", data);
         setCountriesData(data);
       })
       .catch(err => console.log("Err :", err))
+    setTitle(region)
     setIsOpen(false)
   }
 
@@ -33,7 +34,7 @@ function Filter() {
     <div className="FilterBox">
       <div className="selectTitle"
         onClick={openList}
-      >Filter by Region</div>
+      >{title}</div>
       <i className="fas fa-angle-down downIcon"></i>
       { isOpen 
         ? (
