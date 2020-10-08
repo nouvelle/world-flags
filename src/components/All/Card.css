@@ -1,6 +1,6 @@
 .card {
   width: 200px;
-  height: 280px;
+  min-height: 280px;
   margin-bottom: 30px;
   border-radius: 10px;
   box-shadow: 0 3px 4px rgba(180, 180, 180, .2);
@@ -8,7 +8,6 @@
 
 .flag {
   width: 200px;
-  /* height: 130px; */
 }
 
 .card img {
