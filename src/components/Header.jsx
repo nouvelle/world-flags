@@ -16,11 +16,13 @@ function Header() {
 
   return (
     <header className="header">
-      <p onClick={goHome}>Where in the world?</p>
-      <p onClick={changeMord}>
-        <i className="fas fa-moon moonIcon"></i>
-        Dark Mord
+      <div className="container">
+        <p className="headerTitle" onClick={goHome}>Where in the world?</p>
+        <p onClick={changeMord}>
+          <i className="fas fa-moon moonIcon"></i>
+          Dark Mord
         </p>
+      </div>
     </header>
   );
 }

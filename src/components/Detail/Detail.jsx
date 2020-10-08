@@ -56,7 +56,7 @@ function Detail() {
   }
 
   return (
-    <div className="contents">
+    <div className="container">
       <button onClick={changeView} className="backBtn">← Back</button>
       <div className="wrapDetail">
         <div className="leftFlag">

@@ -11,7 +11,7 @@ function All() {
 
   // console.log(countriesData)
   return (
-    <div className="contents">
+    <div className="container">
       <div className="choicesWrap">
         <Input />
         <Filter />
