@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { RootContext } from '../App';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
 import './Header.css';
 
 function Header() {
@@ -15,7 +17,10 @@ function Header() {
   return (
     <header className="header">
       <p onClick={goHome}>Where in the world?</p>
-      <p onClick={changeMord}>Dark Mord</p>
+      <p onClick={changeMord}>
+        <i class="fas fa-moon moonIcon"></i>
+        Dark Mord
+        </p>
     </header>
   );
 }

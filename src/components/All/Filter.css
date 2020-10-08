@@ -1,21 +1,49 @@
 .FilterBox {
-  display: flex;
   margin: 30px 0;
   padding: 0;
-  height: 47px;
 }
 
-.FilterBox select {
+.FilterBox .selectTitle {
   width: 180px;
+  height: 47px;
+  box-sizing: border-box;
   font-size: 14px;
-  padding: 5px 10px;
+  line-height: 40px;
+  padding: 5px 15px;
   border: none;
   border-radius: 3px;
   background: hsl(0, 0%, 100%);
   box-shadow: 3px 3px 4px rgba(180, 180, 180, .2);
   color: hsl(0, 0%, 52%);
 }
-
-.FilterBox select:focus {
-  outline:0;
+.downIcon {
+  position: relative;
+  top: -32px;
+  left: 160px;
+  color: hsl(0, 0%, 52%);
+}
+ul.selectList {
+  /* display: none; */
+  position: absolute;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 180px;
+  border-radius: 2px;
+  list-style: none;
+  margin-top: -20px;
+  padding: 10px 0;
+  color: hsl(0, 0%, 52%);
+  background: hsl(0, 0%, 100%);
+}
+ul.selectList li {
+  display: block;
+  text-align: left;
+  padding: 5px 15px;
+  color: #999;
+  cursor: pointer;
+  background: #fff;
+}
+ul.selectList li:hover {
+  background: #4ebbf0;
+  color: #fff;
 }

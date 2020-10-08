@@ -17,6 +17,7 @@
   color: hsl(0, 0%, 52%);
 }
 .searchBox {
+  width: 450px;
   padding: 20px 40px 20px;
   border: none;
   margin-left: -16px;

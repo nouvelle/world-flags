@@ -7,11 +7,13 @@
   justify-content: space-between;
 }
 
-p {
+.header p {
   margin: 0;
   cursor: pointer;
 }
-
+.moonIcon {
+  margin-right: 10px;
+}
 @media screen and (max-width: 375px) {
   .header {
     padding: 20px;
