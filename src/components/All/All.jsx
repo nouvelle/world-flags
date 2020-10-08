@@ -17,14 +17,14 @@ function All() {
         <Filter />
       </div>
       <div className="cardWrap">
-        {(() => {
-          if(countriesData) {
-            return countriesData.map((country, i) => {
-              // console.log(country);
-              return <Card key={i} country={country} />
-            })
-          }
-        })()}
+        {countriesData 
+          ? (
+              countriesData.map((country, i) => {
+                return <Card key={i} country={country} />
+              })
+            )
+          : <></>
+        }
       </div>
     </div>
   );

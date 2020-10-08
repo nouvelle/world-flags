@@ -25,10 +25,7 @@ function App() {
     <div className={`app ${colorMode}`}>
       <RootContext.Provider value={[countriesData, setCountriesData, detail, setDetail, isAll, setIsAll, colorMode, setColorMode]}>
       <Header />
-        {(() => {
-          return isAll ? <All /> : <Detail />;
-        })()}
-        
+        {isAll ? <All /> : <Detail />}
       </RootContext.Provider>
     </div>
   );

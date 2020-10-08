@@ -80,19 +80,20 @@ function Detail() {
           </div>
           <div className="borderCountries"><span className="title">Border Countries: </span>
             <div className="wrapBorderCountries">
-            {(() => {
-              if(borders) {
-                return borders.map((country, i) => {
-                  return (
-                    <div 
-                      key={i}
-                      className="borderCountry"
-                      onClick={() => clickBorderCountry(country.name)}
-                    >{country.name}</div>
+              {borders
+                ? (
+                    borders.map((country, i) => {
+                      return (
+                        <div 
+                          key={i}
+                          className="borderCountry"
+                          onClick={() => clickBorderCountry(country.name)}
+                        >{country.name}</div>
+                      )
+                    })
                   )
-                })
+                : <></>
               }
-            })()}
             </div>
           </div>
         </div>

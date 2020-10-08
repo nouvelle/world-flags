@@ -18,22 +18,20 @@ function Card(props) {
 
   return (
     <>
-      {(() => {
-        if(props.country){
-          const data = props.country;
-          return (
-            <div className="card" key={data.name} onClick={() => clickCard(data.name)}>
-              <div className="flag"><img src={data.flag} alt={data.name} /></div>
+      {props.country
+        ? (
+            <div className="card" key={props.country.name} onClick={() => clickCard(props.country.name)}>
+              <div className="flag"><img src={props.country.flag} alt={props.country.name} /></div>
               <div className="description">
-                <div className="countryName">{data.name}</div>
-                <div className="population"><span className="title">Population: </span>{data.population.toLocaleString()}</div>
-                <div className="region"><span className="title">Region: </span>{data.region}</div>
-                <div className="capital"><span className="title">Capital: </span>{data.capital}</div>
+                <div className="countryName">{props.country.name}</div>
+                <div className="population"><span className="title">Population: </span>{props.country.population.toLocaleString()}</div>
+                <div className="region"><span className="title">Region: </span>{props.country.region}</div>
+                <div className="capital"><span className="title">Capital: </span>{props.country.capital}</div>
               </div>
             </div>
-          );
-        }
-      })()}
+          )
+        : <></>
+      }
     </>
   );
 }
