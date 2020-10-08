@@ -6,7 +6,6 @@ import './Input.css';
 
 function Input() {
   const [inputText, setInputText] = useState("");
-  const [errMsg, setErrMsg] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [, setCountriesData, , , ,] = useContext(RootContext);
 
@@ -22,12 +21,7 @@ function Input() {
         .then(res => res.json())
         .then(data => {
           console.log("data", data);
-          if(data.status && data.status === 404){
-            setErrMsg("No data");
-          } else {
-            setErrMsg("");
-            setCountriesData(data);
-          }
+          if(Array.isArray(data)) setCountriesData(data);
         })
         .catch(err => console.log("Err :", err))
         .finally(i => setIsSearching(false))
@@ -46,7 +40,6 @@ function Input() {
           type="text"
           placeholder="Search for a country..."/>
         </div>
-        <div className="errMsg">{errMsg}</div>
       </>
   );
 }
