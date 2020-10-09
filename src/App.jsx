@@ -2,8 +2,8 @@ import React, { createContext, useState, useEffect } from 'react';
 import Header from './components/Header'
 import All from './components/All/All'
 import Detail from './components/Detail/Detail'
-import './App.css';
-import './darkmode.css';
+import './App.scss';
+import './darkmode.scss';
 
 export const RootContext = createContext();
 

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { RootContext } from '../../App';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
-import './Filter.css';
+import './Filter.scss';
 
 function Filter() {
   const [, setCountriesData, , , ,] = useContext(RootContext);

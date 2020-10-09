@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { RootContext } from '../../App';
 
-import './Detail.css';
+import './Detail.scss';
 
 function Detail() {
   const [borders, setBorders] = useState("");

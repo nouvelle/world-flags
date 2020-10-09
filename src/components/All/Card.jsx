@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { RootContext } from '../../App';
-import './Card.css';
+import './Card.scss';
 
 function Card(props) {
   const [, , , setDetail, , setIsAll] = useContext(RootContext);

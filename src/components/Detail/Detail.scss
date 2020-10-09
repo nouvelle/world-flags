@@ -1,0 +1,102 @@
+.contents {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    .backBtn {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      background: hsl(0, 0%, 100%);
+      box-shadow: 0 0 4px 1px  rgba(130, 130, 130, .2);
+      margin: 15px 0 30px;
+      border: none;
+      border-radius: 3px;
+    }
+    .backBtn:active {
+      background: #f3f3f3;
+      outline:0;
+    }
+    .wrapDetail {
+      display: flex;
+      .leftFlag {
+        width: 100%;
+        height: 100%;
+        margin-right: 4%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .rightDetail {
+        margin: 30px 0;
+        .countryName {
+          font-size: 1.6em;
+        }
+        .wrapInsideDetail {
+          display: flex;
+          .leftInsideDetail,
+          .rightInsideDetail {
+            width: 50%;
+            
+            div {
+              line-height: 2em;
+            }
+          }
+        }
+        .borderCountries {
+          margin-top: 50px;
+          .wrapBorderCountries {
+            display: inline;
+            .borderCountry {
+              min-width: 60px;
+              text-align: center;
+              background: hsl(0, 0%, 100%);
+              box-shadow: 0 0 4px 1px  rgba(130, 130, 130, .2);
+              border: none;
+              border-radius: 3px;
+              display: inline-block;
+              margin: 10px 5px 0 0;
+              padding: 2px 10px;
+              font-size: 14px;
+              cursor: pointer;
+            }
+          }
+        }
+        .title {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contents {
+    .container {
+      padding: 15px 20px;
+      .wrapDetail {
+        display: block;
+        .leftFlag {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .rightDetail {
+          .wrapInsideDetail {
+            display: block;
+            .leftInsideDetail,
+            .rightInsideDetail {
+              width: 100%;
+              margin-top: 20px;
+            }
+          }
+          .borderCountries{
+            .wrapBorderCountries {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

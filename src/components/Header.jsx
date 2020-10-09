@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { RootContext } from '../App';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
-import './Header.css';
+import './Header.scss';
 
 function Header() {
   const [, , , , , setIsAll, colorMode, setColorMode] = useContext(RootContext);

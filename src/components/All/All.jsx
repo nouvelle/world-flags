@@ -4,7 +4,7 @@ import Input from './Input'
 import Filter from './Filter'
 import { RootContext } from '../../App';
 
-import './All.css';
+import './All.scss';
 
 function All() {
   const [countriesData] = useContext(RootContext);
