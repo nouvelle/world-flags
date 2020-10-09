@@ -1,32 +1,34 @@
+@import "./assets/_palette.sass";
+
 .app.dark {
-  background: hsl(207, 26%, 17%);
-  color: hsl(0, 0%, 100%);
+  background: $verydarkblue;
+  color: $white;
   
   header{
-    background: hsl(209, 23%, 22%);
-    box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+    background: $darkblue;
+    box-shadow: 0 3px 4px $shadowHeader;
   }
 
   .contents{
-    background: hsl(207, 26%, 17%);
+    background: $verydarkblue;
   }
 
   .card,
   .searchBox,
   .selectTitle,
   .selectList {
-    background: hsl(209, 23%, 22%);
-    box-shadow: 3px 3px 4px rgb(33, 33, 33);
+    background: $darkblue;
+    box-shadow: 3px 3px 4px $shadowInput;
   }
   .backBtn,
   .borderCountry{
-    background: hsl(209, 23%, 22%);
-    box-shadow: 0 0 4px 1px rgb(33, 33, 33);
-    color: hsl(0, 0%, 100%);
+    background: $darkblue;
+    box-shadow: 0 0 4px 1px $shadowInput;
+    color: $white;
   }
   .selectList li {
-    background: hsl(209, 23%, 22%);
-    color: hsl(0, 0%, 100%);
+    background: $darkblue;
+    color: $white;
   }
 }
 

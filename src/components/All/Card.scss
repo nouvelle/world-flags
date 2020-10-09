@@ -1,9 +1,11 @@
+@import "../../assets/_palette.sass";
+
 .card {
   width: 335px;
   min-height: 280px;
   margin-bottom: 30px;
   border-radius: 10px;
-  box-shadow: 0 3px 4px rgba(180, 180, 180, .2);
+  box-shadow: 0 3px 4px $shadow;
   .flag {
     width: 100%;
     /* height: 160px; */

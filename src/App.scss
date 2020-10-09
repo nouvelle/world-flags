@@ -1,7 +1,9 @@
+@import "./assets/_palette.sass";
+
 .app {
-  background-color: hsl(0, 0%, 98%);
+  background-color: $verylightgray;
   height: 100%;
-  color:hsl(200, 15%, 8%);
+  color: $verydarkblue;
 }
 
 @media screen and (max-width: 375px) {

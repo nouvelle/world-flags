@@ -1,3 +1,5 @@
+@import "../../assets/_palette.sass";
+
 .inputBox {
   display: flex;
   width: 350px;
@@ -9,7 +11,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 10px;
-    color: hsl(0, 0%, 52%);
+    color: $darkgray;
   }
   .searchBox {
     width: 450px;
@@ -17,10 +19,10 @@
     border: none;
     margin-left: -16px;
     font-size: 14px;
-    background: hsl(0, 0%, 100%);
-    box-shadow: 3px 3px 4px rgba(180, 180, 180, .2);
+    background: $white;
+    box-shadow: 3px 3px 4px $shadow;
     border-radius: 3px;
-    color: hsl(0, 0%, 52%);
+    color: $darkgray;
   }
   .searchBox:focus {
     outline:0;

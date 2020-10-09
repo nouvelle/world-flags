@@ -1,3 +1,5 @@
+@import "../../assets/_palette.sass";
+
 .FilterBox {
   margin: 30px 0;
   padding: 0;
@@ -11,15 +13,15 @@
     padding: 5px 15px;
     border: none;
     border-radius: 3px;
-    background: hsl(0, 0%, 100%);
-    box-shadow: 3px 3px 4px rgba(180, 180, 180, .2);
-    color: hsl(0, 0%, 52%);
+    background: $white;
+    box-shadow: 3px 3px 4px $shadow;
+    color: $darkgray;
   }
   .downIcon {
     position: relative;
     top: -32px;
     left: 160px;
-    color: hsl(0, 0%, 52%);
+    color: $darkgray;
   }
   ul.selectList {
     position: absolute;
@@ -30,19 +32,19 @@
     list-style: none;
     margin-top: -20px;
     padding: 10px 0;
-    color: hsl(0, 0%, 52%);
-    background: hsl(0, 0%, 100%);
+    color: $darkgray;
+    background: $white;
     li {
       display: block;
       text-align: left;
       padding: 5px 15px;
-      color: #999;
+      color: $darkgray;
       cursor: pointer;
-      background: #fff;
+      background: $white;
     }
     li:hover {
-      background: #4ebbf0;
-      color: #fff;
+      background: $listHover;
+      color: $white;
     }
   }
 }

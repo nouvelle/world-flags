@@ -1,3 +1,5 @@
+@import "../../assets/_palette.sass";
+
 .contents {
   .container {
     max-width: 1440px;
@@ -7,14 +9,14 @@
       width: 100px;
       height: 30px;
       text-align: center;
-      background: hsl(0, 0%, 100%);
-      box-shadow: 0 0 4px 1px  rgba(130, 130, 130, .2);
+      background: $white;
+      box-shadow: 0 0 4px 1px $shadowBtn;
       margin: 15px 0 30px;
       border: none;
       border-radius: 3px;
     }
     .backBtn:active {
-      background: #f3f3f3;
+      background: $btnActive;
       outline:0;
     }
     .wrapDetail {
@@ -51,8 +53,8 @@
             .borderCountry {
               min-width: 60px;
               text-align: center;
-              background: hsl(0, 0%, 100%);
-              box-shadow: 0 0 4px 1px  rgba(130, 130, 130, .2);
+              background: $white;
+              box-shadow: 0 0 4px 1px  $shadowBtn;
               border: none;
               border-radius: 3px;
               display: inline-block;
